@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadelinha do bts</title>
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+    <p>Exercício de Aula</p>
+
+    <form id="formulario" >
+        <input id="nome" type="text" placeholder="Insira seu nome">
+        <input id="genero" type="text" placeholder="Insira seu genero">
+        <button>concluido</button>
+    </form>
+    
+    <div id="resultado"></div>
+
+    <script>
+        function onSubmit (event) {
+                event.preventDefault()
+        
+        let nomes = nome.value
+        let generos = genero.value
+        let concluido
+
+        if (generos == "feminino") {
+            concluido = `<br> Seja Bem Vinda <b>${nomes}!<b/>`}
+        else if ( generos == "masculino") {
+            concluido = `<br> Seja Bem Vindo <b>${nomes}!<b/>`}
+
+        resultado.innerHTML = concluido
+
+        }
+        formulario.addEventListener ('submit', onSubmit)
+        
+    </script>
+
+</body>
+</html>

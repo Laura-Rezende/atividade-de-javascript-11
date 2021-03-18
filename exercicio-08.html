@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadelinha do bts</title>
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+    <p>Exercício de Aula</p>
+
+    <form id="formulario" >
+        <select id="tempo">
+        <option value="" selected>Selecione</option>
+        <option value="Ensolarado">Ensolarado</option>
+        <option value="Chuvoso">Chuvoso</option>
+        <option value="Nevando">Nevando</option>
+        <option value="Nublado">Nublado</option>
+        </select>
+        <button>concluido</button>
+    </form>
+    
+    <div id="resultado"></div>
+
+    <script>
+        function onSubmit (event) {
+                event.preventDefault()
+
+        let mensagem = tempo.value
+        let clima
+        
+        if (mensagem == "Ensolarado") {
+            clima = `<br> Hoje o tempo está ensolarado, não se esqueça de se hidratar-se!!`
+        }
+        else if (mensagem == "Chuvoso") {
+            clima = `<br> Hoje o tempo está chuvoso!!! Se proteja! `
+        } 
+        else if (mensagem == "Nevando") {
+            clima = `<br> Hoje o tempo está nevando! Se agasalhe bem! `
+        } 
+        else if (mensagem == "Nublado") {
+            clima = `<br> Hoje o tempo está nublado, fique atento! Pode chover! `
+        } 
+        
+        resultado.innerHTML = clima
+        }
+
+        formulario.addEventListener ('submit', onSubmit)
+    </script>
+
+</body>
+</html>
