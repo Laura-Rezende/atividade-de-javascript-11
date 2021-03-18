@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03 - Calculo </title>
+</head>
+<body>
+    <h1>Exercício 03 - Calculo</h1>
+    <p>Criar uma página que solicita três números (a, b e c), calcula x1 e x2 através da Fórmula de Bhaskara (também conhecida como Equação de 2º Grau) e exibe estas duas raízes como resultado.</p>
+
+    <script>
+       alert ('Calculo com a formula de Bhaskara')
+
+       //variaveis
+       //espressão de segundo grau, exemplo: x^2-3x-10=0
+       let A = parseFloat (prompt ('Informe o valor de A:'))
+       let B = parseFloat (prompt ('Informe o valor de B:'))
+       let C = parseFloat (prompt ('informe o valor de C:'))
+
+       //let Delta = (B^2) - 4*(A)*(C)
+       //if = uma condição
+
+        let Delta = Math.pow(B,2) - (4*(A)*(C)) //math.pow = elevar um numero
+        document.write (`Resultado de delta é: ${Delta}`)
+
+        //math.sqrt = raiz quadrada
+        let x1 = (-B + Math.sqrt (Delta))/(2*A)
+        let x2 = (-B - Math.sqrt (Delta))/(2*A)
+
+        document.write (`
+        <ul>
+        <li> O resultado de x1 é de <b>${x1}</b> e de x2 é <b>${x2}</b> </li>
+        </ul>
+        `)
+
+        //ou podemos fazer com o if
+        
+        //if(delta < 0) {`document.write (não exitem raizes reais)`}
+        //if(delta > 0) {`
+        
+          //document.write ( o valor é de ${x1} e ${x2})
+
+        //`}
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadelinha do bts - Aula 05</title>
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+    <p>Não vamos mais usar prompt e document.write!!! - racionado ao exercício de calculo 01</p>
+
+    <form id="formulario">
+
+        <input id="numero1" type="text" placeholder="Inseria o número um">
+        <input id="numero2" type="text" placeholder="Inseria o número dois">
+        <button>Calcular</button>
+
+    </form>
+
+    <div id="resultado"></div> 
+
+    <script>
+        function onSubmit (event) {
+            event.preventDefault ()
+
+        let n1 = numero1.value 
+        let n2 = numero2.value
+
+        let radicao = parseFloat (n1) + parseFloat (n2)
+        let rsubtracao = parseFloat (n1) - parseFloat (n2)
+        let rmultiplicacao = parseFloat (n1) * parseFloat (n2)
+        let rdivisao = parseFloat (n1) / parseFloat (n2)
+
+        resultado.innerHTML = `
+        <ul>
+            <li> Adição: <b>${radicao}</b> </li>
+            <li> Subtração: <b>${rsubtracao}</b> </li>
+            <li> Multiplicação: <b>${rmultiplicacao}</b> </li>
+            <li> Divisão: <b>${rdivisao}</b> </li>
+        </ul>
+        `
+        }
+
+        formulario.addEventListener ('submit', onSubmit)
+    </script>
+
+</body>
+</html>

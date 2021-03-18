@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadelinha do bts - Aula 05</title>
+</head>
+<body>
+    <h1>Olá Mundo!</h1>
+    <p>Não vamos mais usar prompt e document.write!!! - racionado ao exercício de calculo 03</p>
+
+    <form id="formulario">
+        <input id="letraA" type="text" placeholder="Inseria o coeficiente A">
+        <input id="letraB" type="text" placeholder="Inseria o coeficiente B">
+        <input id="letraC" type="text" placeholder="Inseria o coeficiente C">
+        <button>Calcular</button>
+
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        function onSubmit (event) {
+           event.preventDefault ()
+        
+        let A = letraA.value
+        let B = letraB.value
+        let C = letraC.value
+
+        let Delta = Math.pow(B,2) - (4*(A)*(C))
+
+        let x1 = (-B + Math.sqrt (Delta))/(2*A)
+        let x2 = (-B - Math.sqrt (Delta))/(2*A)
+
+        resultado.innerHTML = `
+        <ul>
+        <li> O resultado de x1 é de <b>${x1}</b> e de x2 é <b>${x2}</b> </li>
+        </ul>
+        
+        `
+        }
+        formulario.addEventListener ('submit', onSubmit)
+    </script>
+
+</body>
+</html>

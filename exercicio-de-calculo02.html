@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 02 - Calculo </title>
+</head>
+<body>
+    <h1>Exercício 02 - Calculo</h1>
+    <p>Criar uma página que solicita ao usuário um número com o preço de um produto e outro número com o percentual de desconto a aplica.</p>
+
+    <script>
+        alert ('Operação com o preço de um produto e seu desconto.')
+
+        //variaveis
+        let pdp = prompt('Informe o preço do produto:')
+        let desc = prompt ('Informe o desconto do produto:')
+        
+        // Para realizar o calculo de desconto de um produto é necessário primeiro descobrir o valor do desconto em decimal, depois multiplicar o valor obtido pelo preço do produto e por ultimo subtrair o resultado da multiplicação pelo preço do produto.
+        let r = parseFloat(desc)/100 //resultado
+        let ri = parseFloat (pdp) * parseFloat (r) //resultado intermediario
+        let rf = parseFloat (pdp) - parseFloat (ri) //resultado final
+
+        // fazer aparecer o valor informado e o desconto
+        document.write (`O valor que o cliente vai pagar no produto com o deconto será de: <b>${rf}</b>`)
+    </script>
+
+
+</body>
+</html>
